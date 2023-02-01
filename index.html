@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/todoStyle.css">
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+   <header class="" id="header">
+    <div class="inner-header">
+      <h1>TODO</h1>
+      <div class="DLM" id="DLM-btn">
+        <img class="" src="images/icon-sun.svg" alt="">
+        <img class="imgHidden" src="images/icon-moon.svg" alt="">
+      </div>
+    </div>
+   </header>
+  <main>
+    <div id="main-container">
+      <div class="add-new-task" id="addNewTask">
+        <input type="text" id="new-div-txt" class="task-txt-input" placeholder="Create a new todo.." maxlength="45">
+      </div>
+      <div class="task border-radius" id="task1">
+        <div class="check-border">
+          <div class="check">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="task">
+        <div class="check-border">
+          <div class="check second-task-check-margin">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="task">
+        <div class="check-border">
+          <div class="check">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="task">
+        <div class="check-border">
+          <div class="check second-task-check-margin">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="task">
+        <div class="check-border">
+          <div class="check">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="task">
+        <div class="check-border">
+          <div class="check second-task-check-margin">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="task">
+        <div class="check-border">
+          <div class="check">
+            <img src="images/icon-check.svg" alt="">
+          </div>  
+        </div>
+        <span></span>
+        <div class="cross">
+          <img src="images/icon-cross.svg" alt="delete">
+        </div>
+      </div>
+      <div class="info-div" id="infoDiv">
+       <span><span id="itemsLeft">0</span> items left</span>
+        <span id="clearBtn" class="clearBtn-DM">Clear completed</span>
+      </div>
+      <div class="display-states" id="displayStates">
+        <span id="displayAll">All</span><span id="displayActive">Active</span><span id="displayCompleted">Completed</span>
+      </div>
+    </div>
+  </main>
+  <script src="js/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html{
+  -webkit-tap-highlight-color: transparent;
+  font-size: 18px;
+}
+
+body{
+  font-family: 'Josefin Sans',sans-serif;
+  font-weight: 400;
+  background-color: hsl(235, 21%, 11%);
+
+}
+.body-LM{
+  background-color: hsl(236, 33%, 92%) !important;
+}
+
+
+header{
+  background-image: url(../images/bg-mobile-dark.jpg);
+  height: 13rem;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+.lightBG{
+  background-image: url(../images/bg-mobile-light.jpg) ;
+}
+
+.inner-header{
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+header h1{
+  color: white;
+  letter-spacing: .8rem;
+}
+
+header .DLM{
+  cursor: pointer;
+}
+
+
+#main-container{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 6.3rem;
+    margin: 0 auto;
+}
+
+.add-new-task{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  border-radius: .5rem;
+  width: 100%;
+  height: 3rem;
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+}
+
+
+.task-txt-input{
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-left: 2rem;
+  color: hsl(234, 39%, 85%);
+  font-size: .7rem;
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  caret-color: hsl(220, 98%, 61%);
+}
+
+.task-txt-input::placeholder{
+  color: hsl(234, 11%, 52%);
+}
+
+.task,.info-div,.display-states{
+  width: 100%;
+  height: 3rem;
+  font-size: .7rem;
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+}
+.task{
+  padding-left: .4rem;
+  border-bottom:  hsl(237, 14%, 26%) 1px solid;
+  display: none;
+  align-items: center;
+  box-shadow: 0 15px 20px -3px hsl(231, 21%, 6%);
+}
+.tasks-LM{
+  background-color: hsl(0, 0%, 98%) !important;
+  color: hsl(235, 19%, 35%) !important;
+}
+.task-border-LM{
+  border-bottom:  hsl(233, 11%, 84%) 1px solid;
+}
+.task-shadow-LM{
+  box-shadow: 0 15px 20px -3px hsl(0, 0%, 63%);
+}
+.border-radius{
+  border-radius: .5rem .5rem 0 0;
+}
+
+
+
+
+
+.task .check img{
+  width: .7rem;
+  height: .7rem;
+  margin: 0 auto;
+}
+.inner-check-style{
+  display: flex !important;
+  background:linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%)) !important;
+}
+.outer-check-style{
+  background: none !important;
+  border: none !important;
+}
+.inner-check-img{
+  display: block !important;
+}
+
+.check-border:hover{
+  background:linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  border: none;
+}
+.check-border:hover .check{
+  display: flex;
+  background: hsl(235, 24%, 19%);
+}
+.check-border:hover .check-LM{
+  background: hsl(0, 0%, 98%);
+}
+.check-border:hover img{
+  display: none;
+}
+
+.check-border{
+  border: 1px solid hsl(233, 14%, 35%);
+  width: 1.25rem;
+  height: 1.25rem; 
+  border-radius: 50%;
+  margin-left: .7rem;
+  margin-right: .6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.check-border .check{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%)) ;
+}
+
+
+
+.task .cross{
+  margin-right: 1.1rem;
+  margin-left: auto;
+  cursor: pointer;
+  display: none;
+}
+.task:hover .cross{
+  display: block;
+}
+.task .cross img{
+  width: .8rem;
+  height: .8rem;
+}
+
+
+
+.task span{
+  width: 75%;
+  height: 70%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow-wrap: break-word;
+  align-items: center;
+}
+.task span::-webkit-scrollbar{
+  background-color: rgb(28, 28, 29);
+  height: .5rem;
+  border-radius: 1rem;
+}
+.task span::-webkit-scrollbar-thumb{
+  background-color: rgb(65, 64, 64);
+  border-radius: 1rem;
+}
+.task .span-scrollbar-LM::-webkit-scrollbar{
+  background-color: rgb(197, 197, 202) ;
+}
+.task .span-scrollbar-LM::-webkit-scrollbar-thumb{
+  background-color: rgb(119, 119, 119);
+}
+
+.checked-span{
+  color: hsl(233, 14%, 35%);
+  text-decoration: line-through;
+}
+.checked-span-LM{
+  color: hsl(233, 11%, 84%) !important;
+}
+
+
+
+
+
+.info-div{
+  padding: 0 1.1rem;
+  border-radius: 0 0 .5rem .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  color: hsl(234, 11%, 52%);
+  box-shadow: 0 35px 15px -20px hsl(231, 21%, 6%);
+}
+.info-div-shadow-LM{
+  box-shadow: 0 35px 15px -20px hsl(0, 0%, 63%);
+}
+
+#clearBtn{
+  cursor: pointer;
+}
+.clearBtn-DM:active{
+  color: white;
+}
+.clearBtn-LM:active{
+  color: hsl(235, 19%, 35%);
+}
+
+
+
+
+.display-states{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+  border: none;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  font-size: .8rem;
+  color: hsl(234, 11%, 52%);
+  box-shadow: 0 30px 30px -15px hsl(231, 21%, 6%);
+}
+.display-states-selected{
+  color: hsl(220, 98%, 61%);
+}
+.display-states span:active{
+  color: white;
+}
+.display-states-span-LM:active{
+  color: hsl(235, 19%, 35%) !important;
+}
+.display-states-shadow-LM{
+  box-shadow: 0 30px 30px -15px hsl(0, 0%, 63%);
+}
+.display-states-LM{
+  background-color: hsl(0, 0%, 98%) !important;
+}
+.display-states span{
+  cursor: pointer;
+  font-weight: 700;
+}
+
+
+.imgHidden{
+  display: none;
+}
+
+
+@media screen and (min-width:610px) {
+  html{
+    font-size: 19px;
+  }
+
+  header{
+    background: url(../images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .inner-header{
+    width: 75%;
+    min-width: 25rem;
+    max-width: 29rem;
+  }
+
+  .lightBG{
+    background: url(../images/bg-desktop-light.jpg);
+  }
+
+
+
+  #main-container{
+    width: 75%;
+    min-width: 25rem;
+    max-width: 29rem;
+  }
+
+
+
+  .task-txt-input{
+    font-size: .9rem;
+  }
+  .task{
+    height: 3.5rem;
+    font-size: .9rem;
+  }
+
+
+
+  .check-border{
+    width: 1.3rem;
+    height: 1.3rem;
+    justify-content: center;
+  }
+  .check-border .check{
+    width: 95%;
+    height: 95%;
+  }
+  .check-border .second-task-check-margin{
+    margin-top: .05rem;
+  }
+
+
+
+  .info-div{
+    box-shadow: 0 20px 30px hsl(231, 21%, 6%);
+  }
+  .info-div-shadow-LM{
+    box-shadow: 0 20px 30px hsl(0, 0%, 63%);
+  }
+
+
+
+  .display-states{
+    width: 11rem;
+    position: relative;
+    bottom: 4rem;
+    right: .5rem;
+    box-shadow: none;
+  }
+
+}
